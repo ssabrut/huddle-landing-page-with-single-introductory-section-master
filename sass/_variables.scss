@@ -1,0 +1,25 @@
+// color
+$violet: hsl(257, 40%, 49%);
+$softMagenta: hsl(300, 69%, 71%);
+$white: #fff;
+$black: #000;
+
+// mixins
+@mixin flexCenter($direction) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: $direction;
+}
+
+@mixin mobile {
+  @media screen and (max-width: 47.9375rem) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media screen and (max-width: 89.9375rem) {
+    @content;
+  }
+}

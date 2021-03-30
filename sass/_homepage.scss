@@ -1,0 +1,203 @@
+@import "./variables";
+
+body {
+  background-image: url(/images/bg-desktop.svg);
+  background-size: 100vw;
+  background-color: $violet;
+  width: 100vw;
+  height: 100vh;
+
+  @include mobile {
+    background-image: url(/images/bg-mobile.svg);
+    background-size: 100vw;
+  }
+}
+
+nav {
+  @include flexCenter(row);
+  justify-content: flex-start;
+  width: 90vw;
+  height: 10.25rem;
+  margin: 0 auto 3.75rem auto;
+  padding: 1rem 0;
+
+  @include tablet {
+    height: 8.25rem;
+    margin: 0 auto 1.75rem auto;
+  }
+
+  @include mobile {
+    height: 6.25rem;
+    margin: 0 auto;
+  }
+
+  img {
+    width: 90%;
+
+    @include tablet {
+      width: 70%;
+    }
+
+    @include mobile {
+      width: 50%;
+    }
+  }
+}
+
+main {
+  @include flexCenter(row);
+  justify-content: space-evenly;
+  width: 100vw;
+  margin: auto;
+
+  img {
+    width: 40vw;
+
+    @include tablet {
+      width: 70vw;
+    }
+  }
+
+  @include tablet {
+    @include flexCenter(column);
+  }
+
+  @include mobile {
+    @include flexCenter(column);
+  }
+
+  .heading__text {
+    @include flexCenter(column);
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 35vw;
+    height: 21.375rem;
+
+    @include tablet {
+      @include flexCenter(column);
+      justify-content: space-evenly;
+      align-items: center;
+      text-align: center;
+      width: 80vw;
+      height: 25.625rem;
+    }
+
+    @include mobile {
+      @include flexCenter(column);
+      justify-content: space-evenly;
+      align-items: center;
+      text-align: center;
+      width: 80vw;
+      height: 24.625rem;
+    }
+
+    h1 {
+      font-family: "Poppins", sans-serif;
+      font-size: 3rem;
+      color: $white;
+      width: 35rem;
+
+      @include tablet {
+        width: 80vw;
+        font-size: 2.5rem;
+      }
+
+      @include mobile {
+        width: 80vw;
+        font-size: 1.5rem;
+      }
+    }
+
+    p {
+      font-family: "Open Sans", sans-serif;
+      color: $white;
+      width: 31rem;
+      font-weight: 400;
+      line-height: 1.5;
+
+      @include tablet {
+        width: 80vw;
+        font-size: 1.25rem;
+      }
+
+      @include mobile {
+        width: 80vw;
+        font-size: 1rem;
+      }
+    }
+
+    a {
+      @include flexCenter(row);
+      font-family: "Poppins", sans-serif;
+      text-decoration: none;
+      color: $violet;
+      width: 13rem;
+      height: 4.5rem;
+      background-color: $white;
+      border-radius: 4.5rem;
+      box-shadow: 3px 3px 8px rgba($color: $black, $alpha: 0.5);
+      font-weight: 600;
+      transition: all 0.2s ease-in-out;
+
+      &:hover {
+        background-color: $softMagenta;
+      }
+
+      @include tablet {
+        width: 16rem;
+        height: 3.5rem;
+      }
+
+      @include mobile {
+        width: 13.375rem;
+        height: 3.375rem;
+      }
+    }
+  }
+}
+
+.social__media {
+  width: 90vw;
+  text-align: right;
+  margin-top: 1.75rem;
+
+  @include tablet {
+    width: 100vw;
+    margin: auto;
+    text-align: center;
+  }
+
+  a {
+    color: $white;
+    font-size: 2.5rem;
+
+    &:not(:first-child) {
+      margin-left: 1.125rem;
+    }
+
+    @include mobile {
+      font-size: 2rem;
+    }
+  }
+}
+
+.attribution {
+  width: 100vw;
+  margin: auto;
+  font-size: 1.5rem;
+  color: $white;
+  text-align: center;
+
+  @include tablet {
+    width: 70vw;
+    font-size: 1.25rem;
+  }
+
+  a {
+    color: $white;
+
+    &:hover {
+      color: lightgray;
+    }
+  }
+}
